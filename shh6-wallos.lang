@@ -1,0 +1,97 @@
+[en-us]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[zh-cn]
+name = "Wallos"
+auth = "shh"
+descript = "订阅与账单管理：记录周期性支出、到期提醒、分类统计。"
+release_note = "1. 首次发布。"
+important = "需要先在 TOS 应用中心安装并启用 DockerEngine。"
+
+[zh-hk]
+name = "Wallos"
+auth = "shh"
+descript = "订阅与账单管理：记录周期性支出、到期提醒、分类统计。"
+release_note = "1. 首次發佈。"
+important = "需要先在 TOS 應用中心安裝並啟用 DockerEngine。"
+
+[fr-fr]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[de-de]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[it-it]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[es-es]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[hu-hu]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[ja-jp]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[ko-kr]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[pl-pl]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[ru-ru]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[tr-tr]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[pt-pt]
+name = "Wallos"
+auth = "shh"
+descript = "Self-hosted subscription tracker with renewal reminders and spending statistics."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."

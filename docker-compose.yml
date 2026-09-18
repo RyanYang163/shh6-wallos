@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  shh6-wallos:
+    image: bellamy/wallos:TAG-VERIFY
+    container_name: shh6-wallos
+    restart: unless-stopped
+    ports:
+      - "18806:80"
+    user: "1000:1000"
+    volumes:
+      - /Volume*/DockerAppData/shh6-wallos/data:/var/www/html/db
+    environment:
+      - TZ=Asia/Shanghai
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: "300m"
+          memory: 256M
+
+x-app-meta:
+  web:
+    port: 18806
+    protocol: http
