@@ -24,8 +24,8 @@
 
 ## 提交前必办事项
 
-- ⚠️ 上游 2026 年有多个 High 级 advisory（SSRF、Zip Slip、OIDC 账号接管、未认证数据库替换等），必须锁定已修复版本，不得使用 latest。
-- ⚠️ 镜像 TAG 未能核实，已置为 TAG-VERIFY，build.sh 会拒绝构建。
+- ⚠️ 上游 2026 年有多个 High 级 advisory（SSRF、Zip Slip、OIDC 账号接管、未认证数据库替换等），必须锁定已修复版本。
+- 镜像已核实：`bellamy/wallos:5.7.1` 存在，2026-09-10 更新，提供 amd64 + arm64 + arm —— 用具体版本号而非 `latest`（审核禁止 :latest）。
 - 需要两个挂载点：/var/www/html/db 与 /var/www/html/images/uploads/logos。
 - [ ] 真机安装、启动、停止、卸载残留四项实测
 - [ ] 首屏加载 ≤ 5 秒（指引 H10）

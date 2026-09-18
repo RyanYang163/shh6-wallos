@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   shh6-wallos:
-    image: bellamy/wallos:TAG-VERIFY
+    image: bellamy/wallos:5.7.1
     container_name: shh6-wallos
     restart: unless-stopped
     ports:
