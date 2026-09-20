@@ -1,0 +1,10 @@
+{
+  "name": "Wallos",
+  "license": "GPL-3.0",
+  "port": 18806,
+  "license_url": "https://raw.githubusercontent.com/ellite/Wallos/main/LICENSE",
+  "healthcheck": "curl -fsS http://localhost:80/ >/dev/null || exit 1",
+  "en": "Self-hosted subscription tracker with renewal reminders and spending statistics.",
+  "features": "- Track recurring subscriptions and their renewal dates\n- Multi-currency support with exchange rates\n- Spending statistics and category breakdowns\n- Email notifications for upcoming renewals",
+  "date": "2026-09-20"
+}
