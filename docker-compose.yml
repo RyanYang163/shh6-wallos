@@ -9,8 +9,6 @@
 # below is published by the upstream project and is used unmodified.
 # Full license text: see LICENSE in the repository root.
 # ============================================================================
-version: "3.8"
-
 services:
   shh6-wallos:
     image: bellamy/wallos:5.7.1
@@ -24,17 +22,19 @@ services:
     restart: unless-stopped
     ports:
       - "18806:80"
-    user: "1000:1000"
     volumes:
       - /Volume*/DockerAppData/shh6-wallos/data:/var/www/html/db
+      - /Volume*/DockerAppData/shh6-wallos/logos:/var/www/html/images/uploads/logos
     environment:
       - TZ=Asia/Shanghai
+      - PUID=1000
+      - PGID=1000
     security_opt:
       - no-new-privileges:true
     deploy:
       resources:
         limits:
-          cpus: "300m"
+          cpus: "0.3"
           memory: 256M
 
 x-app-meta:
