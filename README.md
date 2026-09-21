@@ -1,76 +1,45 @@
 # Wallos
 
-> TOS 7 application package for **Wallos** — platform integration only.
-> The application itself is provided by the upstream project, unmodified.
-
-## Overview
-
-Self-hosted subscription tracker with renewal reminders and spending statistics.
-
-上游项目 / Upstream: <https://github.com/ellite/Wallos>
-上游许可证 / License: **GPL-3.0**
-
-## Features
-
-- Track recurring subscriptions and their renewal dates
-- Multi-currency support with exchange rates
-- Spending statistics and category breakdowns
-- Email notifications for upcoming renewals
-
-## Installation
-
-1. Requirements: TOS 7.0+ and Docker Engine (install from the TOS App Center)
-2. Install from the TOS App Center
-3. Open the app and complete initial configuration
-
-## Usage
-
-1. Access URL: `http://${ip}:18806`
-2. Default credentials: see upstream documentation
-3. Key settings: see upstream documentation
-
-## Permissions
-
-| Permission | Rationale |
+| 项 | 值 |
 |---|---|
-| Network: port 18806 | Web UI access |
-| File system: `/Volume*/DockerAppData/shh6-wallos/` | Application data persistence |
-| User: shh6wallos | Isolated non-root service execution |
+| 应用 ID | `shh6-wallos` |
+| 形态 | Docker 应用（Compose） · WebUI 外开（浏览器新标签） |
+| 版本 | 1.0.0 |
+| 上游项目 | https://github.com/ellite/Wallos |
+| 上游许可证 | GPL-3.0 |
+| 宿主端口 | 18806 |
 
-## Configuration
+## 简介
 
-See `config.ini` for platform metadata; see `docker-compose.yml` for runtime configuration.
+订阅与账单管理：记录周期性支出、到期提醒、分类统计。
 
-## Ports
+## 打包
 
-| Port | Protocol | Purpose |
-|---|---|---|
-| 18806 | TCP | Web UI (Wallos) |
+```bash
+./build.sh                # 默认 x86_64
+./build.sh aarch64        # ARM（Deb 应用）
+```
 
-## Support
+产物在 `build/output/`，同级生成 `<包名>.sha256`。
 
-- Documentation: https://github.com/ellite/Wallos
-- Issue tracker: https://github.com/ellite/Wallos/issues
-- Community: https://github.com/ellite/Wallos
+## 提交前必办事项
 
-## Security & Compliance
+- ⚠️ 上游 2026 年有多个 High 级 advisory（SSRF、Zip Slip、OIDC 账号接管、未认证数据库替换等），必须锁定已修复版本。
+- 镜像已核实：`bellamy/wallos:5.7.1` 存在，2026-09-10 更新，提供 amd64 + arm64 + arm —— 用具体版本号而非 `latest`（审核禁止 :latest）。
+- 需要两个挂载点：/var/www/html/db 与 /var/www/html/images/uploads/logos。
+- [ ] 真机安装、启动、停止、卸载残留四项实测
+- [ ] 首屏加载 ≤ 5 秒（指引 H10）
+- [ ] x86_64 与 aarch64 分别构建并测试（指引 H7）
+- [ ] 提交前跑一遍指引 13.9 上架前自查清单
 
-- **License**: GPL-3.0 — full text in [`LICENSE`](./LICENSE)
-- **Attribution**: see [`NOTICE`](./NOTICE)
-- **Privacy Policy**: see [`PRIVACY.md`](./PRIVACY.md)
-- **Vulnerability scan**: `trivy-report.txt` attached to each Release (HIGH/CRITICAL must be 0)
-- Runs as a non-root dedicated user; no privileged mode, no host network
+## 隐私政策
 
-## Changelog
+见 [PRIVACY.md](./PRIVACY.md)（对应审核项 C3–C8）。
 
-### v1.0.1 (2026-09-20)
-- Compliance update: added LICENSE / NOTICE / PRIVACY materials,
-  declared upstream license inside the package, added container healthcheck
+## 许可证与出处
 
-### v1.0.0
-- Initial release
+本仓库**仅包含 TOS 平台集成所需的配置文件与打包脚本**，应用本体的源码与二进制来自上游项目：https://github.com/ellite/Wallos
 
-## License
+上游许可证：**%s**。本封装保留上游许可证声明，未修改上游代码（Deb 形态下按上游许可证要求随包提供 LICENSE）。
 
-**GPL-3.0** — this packaging repository is distributed under the same license as the
-upstream project. Full text: [`LICENSE`](./LICENSE).
+应用名称与图标为上游项目的标识；本仓库图标为自行绘制的简易图形，不含上游商标元素（对应审核项 H19）。
